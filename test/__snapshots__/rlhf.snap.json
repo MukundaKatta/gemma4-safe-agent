@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "model": "gemma4:2b",
+  "input": "What is RLHF?",
+  "output": null,
+  "tools": [],
+  "error": {
+    "name": "ResponseError",
+    "message": "model 'gemma4:2b' not found"
+  },
+  "fingerprint": {
+    "node": "v26.0.0",
+    "agentsnap": "0.1.1"
+  }
+}

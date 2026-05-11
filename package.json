@@ -1,0 +1,34 @@
+{
+  "name": "gemma4-safe-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small Gemma 4 research agent hardened with the agent-stack (agentfit, agentguard, agentvet, agentsnap, agentcast). Submission for the Gemma 4 DEV Challenge (Build track).",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "demo": "node examples/run-demo.js",
+    "demo:mock": "AGENT_MOCK=1 node examples/run-demo.js",
+    "snapshot": "node --test 'test/**/*.test.js'",
+    "snapshot:update": "AGENTSNAP_UPDATE=1 node --test 'test/**/*.test.js'"
+  },
+  "dependencies": {
+    "@mukundakatta/agentcast": "^0.1.1",
+    "@mukundakatta/agentfit": "^0.1.1",
+    "@mukundakatta/agentguard": "^0.1.1",
+    "@mukundakatta/agentsnap": "^0.1.1",
+    "@mukundakatta/agentvet": "^0.1.1",
+    "ollama": "^0.5.11"
+  },
+  "keywords": [
+    "gemma",
+    "gemma4",
+    "ollama",
+    "agent",
+    "llm",
+    "structured-output",
+    "agent-stack"
+  ],
+  "license": "MIT"
+}
