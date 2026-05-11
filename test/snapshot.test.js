@@ -23,7 +23,7 @@ test('research agent stays on rails', async () => {
   }
   const trace = await record(
     () => firewall(POLICY, () => run('What is RLHF?')),
-    { input: 'What is RLHF?', model: process.env.GEMMA_MODEL ?? 'gemma4:2b' },
+    { input: 'What is RLHF?', model: process.env.GEMMA_MODEL ?? 'gemma4:e2b' },
   );
   await expectSnapshot(trace, 'test/__snapshots__/rlhf.snap.json');
 });
