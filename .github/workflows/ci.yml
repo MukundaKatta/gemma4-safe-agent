@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install
+        run: npm ci || npm install
+
+      - name: Source parses
+        run: |
+          for f in src/*.js examples/*.js test/*.js; do
+            node --check "$f"
+          done
+
+      - name: Run tests (against deterministic stub LLM, no Ollama needed)
+        run: AGENT_MOCK=1 node --test test/*.test.js
+
+      - name: Stub demo emits valid JSON
+        run: |
+          out=$(AGENT_MOCK=1 node examples/run-stub.js)
+          echo "$out" | node -e 'JSON.parse(require("fs").readFileSync(0, "utf8"))'
+          echo "stub demo OK"

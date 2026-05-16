@@ -1,5 +1,8 @@
 # gemma4-safe-agent
 
+[![CI](https://github.com/MukundaKatta/gemma4-safe-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/MukundaKatta/gemma4-safe-agent/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
 > Submission for the [Gemma 4 DEV Challenge](https://dev.to/challenges/google-gemma-2026-05-06), Build track.
 
 A tiny research agent powered by **Gemma 4 (e2b)** running locally on Ollama, hardened by five zero-dependency open-source libraries:
