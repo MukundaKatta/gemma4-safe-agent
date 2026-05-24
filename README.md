@@ -115,7 +115,7 @@ The whole reason this repo works with a small model. `gemma4:e2b` will, more oft
 
 Gemma 4 ships in four sizes; this repo defaults to **`gemma4:e2b`** (edge 2B) because:
 
-- Runs on a laptop in a couple of GB of RAM, no API key.
+- Runs on a laptop in around 8 GB of RAM, no API key.
 - Hardest variant to keep reliable, which makes the safety scaffolding load-bearing instead of cosmetic.
 - The same agent code works unmodified against `gemma4:e4b`, `gemma4:26b` (MoE), and `gemma4:31b` (dense): set `GEMMA_MODEL` and re-run.
 
