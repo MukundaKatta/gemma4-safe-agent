@@ -19,7 +19,7 @@
     "@mukundakatta/agentguard": "^0.1.1",
     "@mukundakatta/agentsnap": "^0.1.1",
     "@mukundakatta/agentvet": "^0.1.1",
-    "ollama": "^0.5.11"
+    "ollama": "^0.6.3"
   },
   "keywords": [
     "gemma",
